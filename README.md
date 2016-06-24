@@ -8,7 +8,7 @@ Install
 -------
 
 ```sh
-npm install ac-test-stream --save
+npm install ac-test-stream --save-dev
 ```
 
 Usage
