@@ -34,8 +34,12 @@ testStream(writable, readable, [
     output: [{ type: 'foo'}]
   }
 ], {
-  writeDelay: 0,      // delay writes of data, in milliseconds
-  checkDelay: 0,      // delay the check if done, in milliseconds
+  writeDelay: 0,      // delay writes of input-data, in milliseconds
+  checkDelay: 20,     // delay the expectations-check, in milliseconds
+
+  strictOrder: true,  // expected output and output of readable must be in order
+  dataTimeout: 1000,  // timeout for data from readable, in milliseconds
+
   endWritable: true,  // call `writable.end()` after the test-run
   endWritableDelay: 0 // delay the call to `writable.end()`, in milliseconds
 })
